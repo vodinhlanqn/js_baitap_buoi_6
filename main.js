@@ -76,6 +76,5 @@ document.getElementById('btnTaoDIV').onclick = function () {
             taoTheDiv += `<div style="background:blue;color: white;padding: 10px;">Div lẽ </div>`;
         }
     }
-
     document.getElementById('ketQuaTheDiv').innerHTML = taoTheDiv;
 }
