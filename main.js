@@ -71,9 +71,10 @@ document.getElementById('btnTaoDIV').onclick = function () {
     var taoTheDiv = '';
     for (var i = 1; i <= 10; i++) {
         if (i % 2 === 0) {
-            taoTheDiv += `<div style="background:red; color: white; padding: 10px;">Div chẵn</div>`;
+            taoTheDiv += `<div class="red">Div chẵn</div>`;
+            // taoTheDiv += `<div style="background:red; color: white; padding: 10px;">Div chẵn</div>`;
         } else {
-            taoTheDiv += `<div style="background:blue;color: white;padding: 10px;">Div lẽ </div>`;
+            taoTheDiv += `<div class="blue">Div lẽ </div>`;
         }
     }
     document.getElementById('ketQuaTheDiv').innerHTML = taoTheDiv;
