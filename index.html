@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JS - Bài tập - Buổi 6</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS v5.2.0-beta1 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<!-- STYLE MAIN CSS -->
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="fs-1 bg-success rounded text-center text-light py-3 mt-3">
+				JAVASCRIP - BÀI TẬP BUỔI 6
+			</h1>
+			<!-- Bài tập số 1: QUẢN LÝ SINH VIÊN -->
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header alert alert-info text-muted text-center fs-3">
+							Bài tập 1: TÌM SỐ NGUYÊN DƯƠNG NHỎ NHẤT
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<p class="fs-5">
+									Tìm số nguyên dương nhỏ nhất sao cho:
+								</p>
+                                <p style="font-weight: bold; color: brown; font-size: 24px; text-align: center; margin-bottom: 0;"
+										>1 + 2 + … + n > 10000</p
+									></p>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<button
+										id="btnCheckNumber"
+										type="button"
+										class="btn btn-danger w-75"
+									>
+										Xem kết quả
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted alert alert-info mb-0">
+							<p id="showSoNguyenDuongNN" class="fs-5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- Bài tập số 2: TÍNH TỔNG - LŨY THỪA -->
+            <div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-3">
+							Bài tập 2: TÍNH TỔNG - LŨY THỪA
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+                                <p class="fs-5">
+									Viết chương trình nhập vào 2 số x, n tính tổng:
+								</p>
+                                <p style="font-weight: bold; color: brown; font-size: 24px; text-align: center;"
+										>S(n) = x + x^2 + x^3 + … + x^n</p
+									></p>
+							</div>
+                            <div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="soX"
+											class="form-control"
+											placeholder="Nhập x "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="soLuyThua"
+											class="form-control"
+											placeholder="Nhập n"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<button
+										id="btnSum"
+										type="button"
+										class="btn btn-success w-75"
+									>
+										Tính tổng
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showTongLuyThua" class="fs-5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- Bài tập số 3: TÍNH GIAI THỪA -->
+            <div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-3">
+							Bài tập 3: TÍNH GIAI THỪA
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+                                <p class="fs-5">
+									Nhập vào n. Tính giai thừa: 
+
+								</p>
+                                <p style="font-weight: bold; color: brown; font-size: 24px; text-align: center;"
+										>1 * 2 * ... * n</p
+									></p>
+							</div>
+                            <div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="numberGT"
+											class="form-control"
+											placeholder="Nhập n"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<button
+										id="btnTinhGT"
+										type="button"
+										class="btn btn-success w-75"
+									>
+										Tính giai thừa
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showKQGiaiThua" class="fs-5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- Bài tập số 4: TẠO 10 THẺ DIV - THEO CHẴN LẼ -->
+            <div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header alert alert-info text-center fs-3">
+							Bài tập 4: TẠO THẺ DIV
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+                                <p class="fs-5">
+									Hãy viết chương trình khi click vào button sẽ in ra 10 thẻ div.
+                                </p>
+                                <p class="fs-5">Nếu div nào vị trí chẵn thì <span style="color: red; ">background màu đỏ</span> và lẻ thì
+<span style="color: blue; ">background màu xanh</span>.</p>
+                                
+							</div>
+                            <div class="row d-flex align-content-center">
+								
+								<div class="col-md-4">
+									<button
+										id="btnTaoDIV"
+										type="button"
+										class="btn btn-primary w-75"
+									>
+										Tạo thẻ DIV
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted alert alert-info mb-0">
+							<p id="ketQuaTheDiv" class="fs-5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+			integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- MAIN JS -->
+		<script src="./main.js"></script>
+	</body>
+</html>
