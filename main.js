@@ -79,3 +79,32 @@ document.getElementById('btnTaoDIV').onclick = function () {
     }
     document.getElementById('ketQuaTheDiv').innerHTML = taoTheDiv;
 }
+
+/**
+ * ----------------------------------------------------------------------------------------------
+ */
+
+// BÀI TẬP 5: BÀI TẬP THÊM - IN RA SỐ NGUYÊN TỐ
+
+document.getElementById('btnSoNT').onclick = function () {
+    var soNT = document.getElementById('soNT').value;
+    var ketQuaSoNT = "";
+    for (var iSo = 2; iSo <= soNT; iSo++) {
+        var checkSNT = kiemTraSoNT(iSo);
+        if (checkSNT) {
+            ketQuaSoNT += iSo + " ";
+        }
+    }
+    document.getElementById('showKQSoNT').innerHTML = `Các số nguyên tố: ${ketQuaSoNT}`;
+}
+
+function kiemTraSoNT(number) {
+    var checkSoNT = true;
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % 2 === 0) {
+            checkSoNT = false;
+            break
+        }
+    }
+    return checkSoNT;
+}
